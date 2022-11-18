@@ -546,6 +546,11 @@ body {
 .pictures {
   padding-bottom: 94px;
 }
+@media screen and (max-width: 1200px) {
+  .pictures {
+    display: none;
+  }
+}
 
 .pictures__title {
   margin-bottom: 50px;

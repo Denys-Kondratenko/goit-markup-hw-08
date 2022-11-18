@@ -1,5 +1,8 @@
 .pictures {
   padding-bottom: 94px;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .pictures__title {
