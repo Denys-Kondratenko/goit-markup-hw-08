@@ -9,9 +9,12 @@
     url(../img/img-bg.jpg);
   background-color: var(--hero-background-color);
   max-width: 1600px;
-  min-height: 600px;
-  padding: 200px 0;
+  // min-height: 600px;
+  padding: 118px 0;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
 }
 
 .hero__wrap {
@@ -19,20 +22,25 @@
 }
 
 .hero__title {
-  max-width: 696px;
+  max-width: 360px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--wite-color);
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
 }
 
 .hero__btn {
-  padding: 10px 32px;
+  padding: 10px 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -45,5 +53,8 @@
   &:hover,
   &:focus {
     background-color: var(--hover-background-color);
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 10px 32px;
   }
 }
