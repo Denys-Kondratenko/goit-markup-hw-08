@@ -104,6 +104,16 @@ body {
     max-width: 480px;
   }
 }
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 
 .btn {
   display: inline-block;
@@ -574,6 +584,11 @@ body {
   padding: 60px 0;
   background-color: var(--team-background-color);
 }
+@media screen and (min-width: 1200px) {
+  .team {
+    padding: 94px 0;
+  }
+}
 
 .team__title {
   margin-bottom: 30px;
@@ -582,6 +597,13 @@ body {
   line-height: 1.18;
   text-align: center;
   color: var(--secondary-color);
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .team__list {
@@ -596,6 +618,16 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--background-color-wite);
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .team__img {
@@ -629,26 +661,50 @@ body {
 }
 
 .clients {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding: 94px 0;
+  }
 }
 
 .clients__title {
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .company__item {
-  width: calc((100% - 150px) / 6);
+  width: 100%;
+  width: calc((100% - 30px) / 2);
   height: 92px;
+}
+@media screen and (min-width: 738px) {
+  .company__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .company__item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .company__link {
