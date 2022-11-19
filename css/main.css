@@ -778,6 +778,11 @@ body {
 .footer__box {
   display: flex;
 }
+@media screen and (max-width: 767px) {
+  .footer__box {
+    flex-direction: column;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__box {
     justify-content: space-between;
@@ -857,9 +862,13 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--wite-color);
-  text-align: center;
   margin-top: 12px;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 1199px) {
+  .join__title {
+    text-align: center;
+  }
 }
 
 .join__list {

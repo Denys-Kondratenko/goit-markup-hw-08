@@ -12,6 +12,9 @@
 
 .footer__box {
   display: flex;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     justify-content: space-between;
     padding-left: 76px;
@@ -88,9 +91,11 @@
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--wite-color);
-  text-align: center;
   margin-top: 12px;
   margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .join__list {
