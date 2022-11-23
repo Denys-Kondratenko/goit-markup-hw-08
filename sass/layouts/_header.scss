@@ -140,6 +140,9 @@
 }
 
 .mob-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -187,8 +190,17 @@
   }
 }
 
-.mob-menu__contacts {
+.mob-menu__contacts--box {
+  margin-top: 32px;
   margin-left: 25px;
+}
+
+.mob-menu__contacts {
+  margin-bottom: 64px;
+}
+
+.mob-menu__contacts-item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .mob-menu__contacts--tel {
@@ -208,7 +220,6 @@
 }
 
 .mob-menu__soc {
-  margin-left: 25px;
 }
 .mob-menu__soc-list {
 }

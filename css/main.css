@@ -489,6 +489,9 @@ body {
 }
 
 .mob-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -532,8 +535,17 @@ body {
   color: var(--accent-color);
 }
 
-.mob-menu__contacts {
+.mob-menu__contacts--box {
+  margin-top: 32px;
   margin-left: 25px;
+}
+
+.mob-menu__contacts {
+  margin-bottom: 64px;
+}
+
+.mob-menu__contacts-item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .mob-menu__contacts--tel {
@@ -550,10 +562,6 @@ body {
   line-height: 1.1666666667;
   letter-spacing: 0.02em;
   color: var(--primary-color);
-}
-
-.mob-menu__soc {
-  margin-left: 25px;
 }
 
 .hero {
