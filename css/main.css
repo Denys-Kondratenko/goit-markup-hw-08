@@ -512,6 +512,23 @@ body {
   fill: currentColor;
 }
 
+.mob-menu__navigation {
+  margin-top: 48px;
+  margin-left: 25px;
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--secondary-color);
+}
+
 .hero {
   background-size: cover;
   background-position: center;

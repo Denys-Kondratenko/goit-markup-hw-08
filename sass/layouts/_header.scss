@@ -165,13 +165,24 @@
 }
 
 .mob-menu__navigation {
+  margin-top: 48px;
+  margin-left: 25px;
 }
 .mob-menu__list {
 }
-.mob-menu__item {
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
 }
+
 .mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+  color: var(--secondary-color);
 }
+
 .mob-menu__contacts {
 }
 .mob-menu__contacts--mail {
