@@ -528,6 +528,33 @@ body {
   letter-spacing: 0.02em;
   color: var(--secondary-color);
 }
+.mob-menu__link:hover, .mob-menu__link:focus {
+  color: var(--accent-color);
+}
+
+.mob-menu__contacts {
+  margin-left: 25px;
+}
+
+.mob-menu__contacts--tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mob-menu__contacts--mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+  color: var(--primary-color);
+}
+
+.mob-menu__soc {
+  margin-left: 25px;
+}
 
 .hero {
   background-size: cover;
