@@ -18,12 +18,15 @@
 }
 
 .navigation__logo {
-  margin-right: 92px;
+  margin-right: 87px;
   padding-top: 24px;
   padding-bottom: 25px;
   &:hover,
   &:focus {
     color: var(--black-color);
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 92px;
   }
 }
 
@@ -42,6 +45,9 @@
   padding: 0;
   background-color: transparent;
   color: var(--secondary-color);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-btn__icon-menu {
@@ -52,6 +58,9 @@
   display: none;
   justify-content: space-between;
   width: 100%;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .navigation__menu {
@@ -98,7 +107,14 @@
 
 .header__contacts {
   display: flex;
-  gap: 30px;
+  // gap: 30px;
+  // flex-direction: column;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 30px;
+  }
 }
 
 .contacts__link {
@@ -106,10 +122,12 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 12px;
+  // line-height: 1.14;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: inherit;
   transition: color var(--animation);
@@ -132,6 +150,12 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -170,8 +194,6 @@
 .mob-menu__navigation {
   margin-top: 48px;
   margin-left: 25px;
-}
-.mob-menu__list {
 }
 
 .mob-menu__item:not(:last-child) {
@@ -220,8 +242,25 @@
 }
 
 .mob-menu__soc {
+  display: flex;
 }
+
 .mob-menu__soc-list {
+  display: flex;
+  &:not(:last-child)::after {
+    content: "";
+    margin-left: 10px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
 }
+
 .mob-menu__soc-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }

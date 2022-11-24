@@ -61,7 +61,7 @@
             </li>
           </ul>
         </div>
-        <button class="menu-btn" type="button">
+        <button class="menu-btn" type="button" data-menu-open>
           <svg
             width="40"
             height="40"
@@ -74,8 +74,8 @@
           </svg>
         </button>
       </div>
-      <div class="mob-menu container">
-        <button class="menu-btn--close" type="button">
+      <div class="mob-menu container is-hidden" data-menu>
+        <button class="menu-btn--close" type="button" data-menu-close>
           <svg
             width="40"
             height="40"
@@ -123,7 +123,7 @@
           <ul class="mob-menu__soc">
             <li class="mob-menu__soc-list list">
               <a
-                class="mob-menu__soc-link"
+                class="mob-menu__soc-link link"
                 href="#"
                 target="_blank"
                 rel="noreferrer nofollow noopener"
@@ -132,7 +132,7 @@
             </li>
             <li class="mob-menu__soc-list list">
               <a
-                class="mob-menu__soc-link"
+                class="mob-menu__soc-link link"
                 href="#"
                 target="_blank"
                 rel="noreferrer nofollow noopener"
@@ -141,7 +141,7 @@
             </li>
             <li class="mob-menu__soc-list list">
               <a
-                class="mob-menu__soc-link"
+                class="mob-menu__soc-link link"
                 href="#"
                 target="_blank"
                 rel="noreferrer nofollow noopener"
@@ -150,7 +150,7 @@
             </li>
             <li class="mob-menu__soc-list list">
               <a
-                class="mob-menu__soc-link"
+                class="mob-menu__soc-link link"
                 href="#"
                 target="_blank"
                 rel="noreferrer nofollow noopener"
@@ -730,5 +730,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
