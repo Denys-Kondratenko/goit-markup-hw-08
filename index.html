@@ -230,6 +230,7 @@
           <ul class="pictures__list list">
             <li class="pictures__item">
               <img
+                srcset="./img/box-1.jpg 1x, ./img/box-1-2x.jpg 2x"
                 src="./img/box-1.jpg"
                 alt="Людина створює сайт"
                 width="370"
@@ -239,6 +240,7 @@
             </li>
             <li class="pictures__item">
               <img
+                srcset="./img/box-2.jpg 1x, ./img/box-2-2x.jpg 2x"
                 src="./img/box-2.jpg"
                 alt="Людина тестує сайт"
                 width="370"
@@ -248,6 +250,7 @@
             </li>
             <li class="pictures__item">
               <img
+                srcset="./img/box-3.jpg 1x, ./img/box-3-2x.jpg 2x"
                 src="./img/box-3.jpg"
                 alt="Людина обирає кольори для сайту"
                 width="370"
@@ -263,13 +266,33 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./img/team-card-1.jpg"
-                alt="Усміхнений чоловік в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./img/team-card-1.jpg 1x, ./img/team-card-1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/team-card-1-tab.jpg    1x,
+                    ./img/team-card-1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/team-card-1-mob.jpg    1x,
+                    ./img/team-card-1-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="team__img"
+                  src="./img/team-card-1.jpg"
+                  alt="Усміхнений чоловік в окулярах"
+                  width="450"
+                  height="260"
+                />
+              </picture>
               <h3 class="team__subtitle">Ігор Дем'яненко</h3>
               <p class="team__text" lang="eu">Product Designer</p>
               <ul class="social list">
@@ -324,13 +347,33 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./img/team-card-2.jpg"
-                alt="Усміхнена жінка в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./img/team-card-2.jpg 1x, ./img/team-card-2-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/team-card-2-tab.jpg    1x,
+                    ./img/team-card-2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/team-card-2-mob.jpg    1x,
+                    ./img/team-card-2-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="team__img"
+                  src="./img/team-card-2.jpg"
+                  alt="Усміхнена жінка в окулярах"
+                  width="450"
+                  height="260"
+                />
+              </picture>
               <h3 class="team__subtitle">Ольга Рєпіна</h3>
               <p class="team__text" lang="eu">Frontend Developer</p>
               <ul class="social list">
@@ -385,13 +428,33 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./img/team-card-3.jpg"
-                alt="Усміхнений чоловік"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./img/team-card-3.jpg 1x, ./img/team-card-3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/team-card-3-tab.jpg    1x,
+                    ./img/team-card-3-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/team-card-3-mob.jpg    1x,
+                    ./img/team-card-3-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="team__img"
+                  src="./img/team-card-3.jpg"
+                  alt="Усміхнений чоловік"
+                  width="450"
+                  height="260"
+                />
+              </picture>
               <h3 class="team__subtitle">Микола Тарасов</h3>
               <p class="team__text" lang="eu">Marketing</p>
               <ul class="social list">
@@ -446,13 +509,33 @@
               </ul>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./img/team-card-4.jpg"
-                alt="Усміхнений чоловік в окулярах"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./img/team-card-4.jpg 1x, ./img/team-card-4-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/team-card-4-tab.jpg    1x,
+                    ./img/team-card-4-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/team-card-4-mob.jpg    1x,
+                    ./img/team-card-4-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  class="team__img"
+                  src="./img/team-card-4.jpg"
+                  alt="Усміхнений чоловік в окулярах"
+                  width="450"
+                  height="260"
+                />
+              </picture>
               <h3 class="team__subtitle">Михайло Єрмаков</h3>
               <p class="team__text" lang="eu">UI Designer</p>
               <ul class="social list">
