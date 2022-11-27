@@ -7,28 +7,42 @@
   top: 0;
   transition: opacity 500ms linear, visibility 500ms linear;
   perspective: 400px;
+  overflow-y: scroll;
 }
 
 .modal {
   position: relative;
-  margin: 93px auto 94px auto;
   padding: 40px;
-  // width: 528px;
-  max-width: 450px;
   width: 100%;
-  // min-height: 581px;
   background-color: var(--modal-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%) rotateX(0deg);
   transition: transform 500ms linear;
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) rotateX(270deg);
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 93px auto 94px auto;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin: 208px auto 207px auto;
+  }
+
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(0deg);
   }
 }
 
@@ -50,6 +64,10 @@
   &:focus {
     fill: var(--accent-color);
   }
+}
+
+.modal-close-icon {
+  fill: currentColor;
 }
 
 .modal-title {
@@ -94,6 +112,11 @@
   &:focus {
     border: 1px solid var(--accent-color);
   }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
 }
 
 .input-wrap {
@@ -119,7 +142,6 @@
   display: block;
   padding: 12px 16px;
   height: 120px;
-  // height: 138px;
   resize: none;
   margin-top: 4px;
   width: inherit;
@@ -139,13 +161,21 @@
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
-    // font-size: 12px;
-    // line-height: calc(14 / 12);
     font-size: 14px;
     line-height: calc(16 / 14);
 
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+      line-height: calc(14 / 12);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
   }
 }
 
@@ -154,7 +184,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 
 .modal-accept-input {
@@ -179,12 +209,16 @@
 .modal-accept-formatting {
   margin: 0;
   font-family: "Roboto";
-  // font-size: 14px;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.03em;
   text-align: center;
   white-space: pre-wrap;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-accept-link {

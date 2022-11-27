@@ -5,6 +5,9 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-color);
   background-color: var(--background-color-wite);
+  &.no-scroll {
+    overflow-y: hidden;
+  }
 }
 
 .link {

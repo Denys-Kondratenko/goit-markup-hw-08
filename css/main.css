@@ -61,6 +61,9 @@ body {
   color: var(--primary-color);
   background-color: var(--background-color-wite);
 }
+body.no-scroll {
+  overflow-y: hidden;
+}
 
 .link {
   text-decoration: none;
@@ -136,13 +139,12 @@ body {
   top: 0;
   transition: opacity 500ms linear, visibility 500ms linear;
   perspective: 400px;
+  overflow-y: scroll;
 }
 
 .modal {
   position: relative;
-  margin: 93px auto 94px auto;
   padding: 40px;
-  max-width: 450px;
   width: 100%;
   background-color: var(--modal-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -151,6 +153,31 @@ body {
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) rotateX(270deg);
+}
+@media screen and (max-width: 767px) {
+  .modal {
+    margin: 93px auto 94px auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal {
+    margin: 208px auto 207px auto;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .modal {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(0deg);
+  }
 }
 
 .modal-close {
@@ -169,6 +196,10 @@ body {
 }
 .modal-close:hover, .modal-close:focus {
   fill: var(--accent-color);
+}
+
+.modal-close-icon {
+  fill: currentColor;
 }
 
 .modal-title {
@@ -212,6 +243,12 @@ body {
 }
 .modal-label-input:focus {
   border: 1px solid var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal-label-input {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
 }
 
 .input-wrap {
@@ -277,13 +314,33 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+@media screen and (min-width: 1200px) {
+  .modal-label-textarea::-moz-placeholder {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
+  .modal-label-textarea:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
+  .modal-label-textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-label-textarea {
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
+}
 
 .modal-accept {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
 }
 
 .modal-accept-input {
@@ -312,6 +369,12 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   white-space: pre-wrap;
+}
+@media screen and (min-width: 1200px) {
+  .modal-accept-formatting {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-accept-link {
@@ -567,6 +630,7 @@ body {
   height: 100vh;
   background: var(--background-color-wite);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  overflow-y: scroll;
 }
 
 .menu-btn--close {
@@ -602,9 +666,13 @@ body {
 .mob-menu__link:hover, .mob-menu__link:focus {
   color: var(--accent-color);
 }
+.mob-menu__link.current {
+  color: var(--accent-color);
+}
 
 .mob-menu__contacts--box {
   margin-top: 32px;
+  margin-bottom: 48px;
   margin-left: 25px;
 }
 
@@ -618,10 +686,15 @@ body {
 
 .mob-menu__contacts--tel {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.1764705882;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .mob-menu__contacts--tel {
+    font-size: 34px;
+  }
 }
 
 .mob-menu__contacts--mail {
@@ -634,6 +707,7 @@ body {
 
 .mob-menu__soc {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-menu__soc-list {
@@ -650,25 +724,51 @@ body {
 
 .mob-menu__soc-link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .mob-menu__soc-link {
+    font-size: 18px;
+  }
 }
 
 .hero {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/img-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/img-bg-mob.jpg);
   background-color: var(--hero-background-color);
   max-width: 1600px;
   padding: 118px 0;
   text-align: center;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/img-bg-mob-2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/img-bg-tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/img-bg-tab-2x.jpg);
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero {
     padding: 200px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/img-bg.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/img-bg-2x.jpg);
   }
 }
 
